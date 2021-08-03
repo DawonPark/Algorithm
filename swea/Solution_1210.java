@@ -27,32 +27,33 @@ public class Solution_1210 {
 			int nr=99, nc=start;
 			int dir= 0; // 왼쪽부터볼지 오른쪽부터볼지 
 			while(true) {
-				if(nc+dc[0]>=0&&nc+dc[0]<=99) {
-					if(ladder[nr+dr[0]][nc+dc[0]]==1 &&dir ==0) {
+				if(nc+dc[0]>=0&&nc+dc[0]<100) {
+					if(ladder[nr+dr[0]][nc+dc[0]]==1 &&dir ==0) {			// 좌측에 있는 경우
 					nr = nr+dr[0];
 					nc = nc+dc[0];
 					}else {
 						dir=1;
 					}
-					}
-				if(nc+dc[1]>=0&&nc+dc[1]<=99) {
+				}else {
+					dir=1;
+				}
+				if(nc+dc[1]>=0&&nc+dc[1]<100) {
 					if(ladder[nr+dr[1]][nc+dc[1]]==1 && dir ==1) { // 사다리가 우측에 있는 경우
 					nr = nr+dr[1];
 					nc = nc+dc[1];
 					}
 					else {
-						dir= 2;
+						dir= 0;
 					}
-				}
-				if(ladder[nr+dr[2]][nc+dc[2]]==1 && dir ==2) { //  사다리가 위쪽에 있는경우
-					nr = nr+dr[2];
-					nc = nc+dc[2];	
 				}else {
 					dir=0;
 				}
+				if(ladder[nr+dr[2]][nc+dc[2]]==1) { //  사다리가 위쪽에 있는경우
+					nr = nr+dr[2];
+					nc = nc+dc[2];	
+				}
 				if(nr==0)
 					break;
-//				System.out.println(t+"의 " + "nr : " + nr + "nc : " + nc);
 			}
 			
 			System.out.println("#"+t+" " + nc);
