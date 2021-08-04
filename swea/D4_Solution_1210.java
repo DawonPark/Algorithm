@@ -2,7 +2,7 @@ package swea;
 
 import java.util.Scanner;
 
-public class Solution_1210 {
+public class D4_Solution_1210 {
 	private static int[] dr = {0,0,-1};  // 좌 우 위 순으로 감.
 	private static int[] dc = {-1,+1,0};
 	

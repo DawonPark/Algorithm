@@ -2,7 +2,7 @@ package swea;
 
 import java.util.Scanner;
 
-public class Solution_1289
+public class D3_Solution_1289
 {
 	public static void main(String[] args) {
 		// 100 -> 2번  010 ->2 번 001 ->1번 1010 ->  4번 

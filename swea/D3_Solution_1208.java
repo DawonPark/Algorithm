@@ -5,7 +5,7 @@ import java.io.InputStreamReader;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
-public class Solution_1208 {
+public class D3_Solution_1208 {
 	public static void main(String[] args) {
 		 Scanner sc= new Scanner(System.in);
          
