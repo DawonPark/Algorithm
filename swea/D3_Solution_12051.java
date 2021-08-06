@@ -28,5 +28,6 @@ public class D3_Solution_12051 {
 					System.out.println("#"+t+" "+ "Broken");
 				}
 			}
+			sc.close();
 		}
 }

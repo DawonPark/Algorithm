@@ -45,5 +45,6 @@ public class D4_Solution_1218 {
 			}
 			
 		}
+		sc.close();
 	}
 }

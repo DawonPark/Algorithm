@@ -58,5 +58,6 @@ public class D4_Solution_1210 {
 			
 			System.out.println("#"+t+" " + nc);
 		}
+		sc.close();
 	}
 }

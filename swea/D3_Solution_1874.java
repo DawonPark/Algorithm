@@ -2,7 +2,6 @@ package swea;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class D3_Solution_1874 {

@@ -23,5 +23,6 @@ public class Main_1546 {
 	
 		result =result/score.length;
 		System.out.println(result);
+		sc.close();
 	}
 }

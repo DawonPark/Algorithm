@@ -20,6 +20,6 @@ public class Solution_1936 {
 			
 			System.out.println("A");
 		}
-		
+		sc.close();
 	}
 }

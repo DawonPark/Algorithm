@@ -42,6 +42,6 @@ public class D3_Solution_1225 {
 			}
 			System.out.println();
 		}
-		
+		sc.close();
 	}
 }

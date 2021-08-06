@@ -1,9 +1,8 @@
 package swea;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+
 import java.util.Scanner;
-import java.util.StringTokenizer;
+
 
 public class D3_Solution_1208 {
 	public static void main(String[] args) {
@@ -40,6 +39,7 @@ public class D3_Solution_1208 {
 	            System.out.println("#"+t + " " + result);
 	             
 	        }
+	        sc.close();
 	    }
 	}
 

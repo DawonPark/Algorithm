@@ -70,7 +70,7 @@ public class Main_1244 {
 			if(i%20 == 0)
 				System.out.println();
 		}
-		
+		sc.close();
 	}
 	
 }

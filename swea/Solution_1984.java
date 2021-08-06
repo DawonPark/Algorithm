@@ -20,5 +20,6 @@ public class Solution_1984 {
 			System.out.println("#"+t+" "+Math.round(result/8));
 			
 		}
+		sc.close();
 	}
 }
