@@ -1,6 +1,9 @@
 package swea;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
+
 
 public class D3_Solution_11856 {
 	/*
@@ -10,6 +13,7 @@ public class D3_Solution_11856 {
 	 */
 	
 	public static void main(String[] args) {
+		List<Integer> temp = new ArrayList<Integer>();
 		Scanner sc = new Scanner(System.in);
 		int tc= Integer.parseInt(sc.nextLine());
 		for(int t=1; t<=tc; t++) {
@@ -33,6 +37,7 @@ public class D3_Solution_11856 {
 			}
 			if(first==2 && second==2) System.out.println("#" +t +" Yes");
 			else System.out.println("#" +t +" No");
+			
 		}
 		sc.close();
 	}
