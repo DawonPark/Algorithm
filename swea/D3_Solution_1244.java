@@ -17,33 +17,32 @@ public class D3_Solution_1244 {
 			for(int i=0; i<s[0].length(); i++) {
 				num[i]= s[0].charAt(i)-'0';
 			}
-			cnt = s[1].charAt(0)-'0';
+		
+			cnt = Integer.parseInt(s[1]);
 			
 			result=0;
 			dfs(0,0);
 			System.out.println("#"+t +" " + result);
 		}
+		sc.close();
 	}
 	
 	public static void dfs(int start, int count) {
 		int temp;
-		int cal = 1;
-		int tempResult =0;
-		for(int i=num.length-1; i>=0; i--) {
-			tempResult+=cal*num[i];
-			cal=  cal*10;
-		}
-		System.out.println(Arrays.toString(num));
-		result =Math.max(result, tempResult);
-		System.out.println(count);
-		if(count ==cnt) {
-		
+		if(count == cnt) {
+			
+			int cal = 1;
+			int tempResult =0;
+			for(int i=num.length-1; i>=0; i--) {
+				tempResult+=cal*num[i];
+				cal=  cal*10;
+			}
+			result =Math.max(result, tempResult);
 			return;
 		}
 		
 		for(int i=start; i<num.length; i++) {
 			for(int j= i+1; j<num.length; j++) {
-				if(num[i] <=num[j]) {
 				temp = num[i]; 
 				num[i] = num[j];
 				num[j] = temp;
@@ -51,7 +50,7 @@ public class D3_Solution_1244 {
 				temp = num[i]; 
 				num[i] = num[j];
 				num[j] = temp;
-				}
+				
 			}
 		}
 	}
