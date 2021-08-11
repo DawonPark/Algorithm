@@ -13,7 +13,7 @@ public class D3_Solution_11856 {
 	 */
 	
 	public static void main(String[] args) {
-		List<Integer> temp = new ArrayList<Integer>();
+	
 		Scanner sc = new Scanner(System.in);
 		int tc= Integer.parseInt(sc.nextLine());
 		for(int t=1; t<=tc; t++) {
