@@ -1,6 +1,6 @@
 package swea;
 
-import java.util.Arrays;
+
 import java.util.Scanner;
 /*
  *  자석 교착상태 카운트 세기
@@ -39,6 +39,7 @@ public class D3_Solution_1220 {
 			
 			
 		}
+		sc.close();
 		
 	}
 }

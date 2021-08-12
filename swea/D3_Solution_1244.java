@@ -1,7 +1,5 @@
 package swea;
 
-
-import java.util.Arrays;
 import java.util.Scanner;
 /*	퀴즈 대회에 참가해서 우승을 하게 되면 보너스 상금을 획득할 수 있는 기회를 부여받는다
 	우승자는 주어진 숫자판들 중에 두 개를 선택에서 정해진 횟수만큼 서로의 자리를 위치를 교환할 수 있다.

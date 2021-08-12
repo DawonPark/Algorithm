@@ -1,6 +1,5 @@
 package swea;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class D3_Solution_5215 {
@@ -37,6 +36,6 @@ public class D3_Solution_5215 {
 			System.out.println("#" + t + " " + answer);
 			
 		}
-		
+		sc.close();
 	}
 }

@@ -1,6 +1,5 @@
 package swea;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class D3_Solution_1206 {
