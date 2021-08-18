@@ -23,7 +23,7 @@ public class Main_1074 {
 				 index +=0;
 			 } else if (r <mid && c>= mid) { // 2사분면
 				 index +=mid*mid;
-				 c -= mid; //  열이 mid에서 나와있기 때문에 줄여줌
+				 c -= mid; // 다음으로 가야할 때  열이 mid에서 나와있기 때문에 줄여줌
 			 } else if(r>=mid && c< mid) { // 3사분면 
 				 index +=mid*mid*2;
 				 r -= mid;// 행이 나와있기 때문에 줄여줌
