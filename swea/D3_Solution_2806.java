@@ -9,6 +9,7 @@ import java.util.Scanner;
  * 	  이차원 배열을 생각하면 복잡할 것 같아서 간단하게 보기 위해 가로를 기준으로 보면 가로에는 다른 것이 없어야한다.
  * -> 한쪽처리는 자연스럽게 배열의 index가 넘어가면서 처리를 해서 체크를 안해도 되고 다른 한쪽은 배열안에 저장을해서
  *    같으면 false 처리 , 틀리면 대각선 체크로 넘어감. -> 대각선 규칙을 찾다보니 (행-행) == (열-열) 같으면 대각선에 있어야한다
+ *    -> 코드는 board[i] = x 에서 i는 열로 받고 x는 행으로 받아서 행만 체크할 수 있도록 함.
  */
 public class D3_Solution_2806 {
 	static int N;
@@ -45,7 +46,7 @@ public class D3_Solution_2806 {
 			if(board[y]==board[i]) {
 				return false; // 가로체크
 			}
-			if(Math.abs(y-i) == Math.abs(board[y]-board[i])) {
+			if(Math.abs(y-i) == Math.abs(board[y]-board[i])) { // 대각선 체크
 				return false;
 			}
 		}
