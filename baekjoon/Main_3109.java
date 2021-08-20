@@ -8,8 +8,10 @@ import java.io.InputStreamReader;
  * 
  * 파이프라인이 겹치지 않아야한다는 것은 한 행마다 설치할 수 있는 개수는 한개만 가능함.
  * 파이프라인이 첫째 행에서 시작하고 열이 전진 할 때 왼쪽 위부터 검사한다면 최대 경우 수가 나온다고 생각함.
- * -> 파이프를 연결해보든 말든 잘 생각해보면 갔던 경로로 갈 경우는 없다. -> 갔던 곳 x로 갱신
  * -> 한번 파이프를 깔면 더 이상 할 필요없기 때문에 check boolean 타입으로 검사해서 true 면 return
+ * -> 파이프를 연결해보든 말든 잘 생각해보면 갔던 경로로 갈 경우는 없다.
+ * -> boolean 배열을 선언해서 체크를 했는데 -> 처음에 선언했던 boolean배열을 빼고 갔던 곳 발당과 같이 x로 갱신
+ * 
  *  
  */
 public class Main_3109 {
@@ -46,9 +48,9 @@ public class Main_3109 {
 		}
 		
 		for(int d =0; d<3; d++) {
+			if(check == true) return;
 			int nr = r + dx[d];
 			int nc = c + 1;
-			if(check == true) return;
 			
 			if(nr <0 || nr >= R || nc< 0 || nc >= C) continue;
 			
