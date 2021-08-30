@@ -2,7 +2,9 @@ package swea;
 
 import java.util.Scanner;
 import java.util.Stack;
-
+/*
+ * 
+ */
 public class D4_Solution_5432 {
 
 	public static void main(String[] args) {

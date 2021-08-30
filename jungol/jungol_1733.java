@@ -1,10 +1,15 @@
 package jungol;
 
 import java.util.Scanner;
-
+/*
+ * 정올 1733 - 오목
+ * 
+ * ->6목 검사가 생각보다 복잡해서 시간이 오래걸림
+ * ->행으로 검사하면서 갈 방향 거꾸로 바둑이 놓여져있으면 넘기고 한번씩만 검사하게함. 
+ */
 public class jungol_1733 {
 	public static void main(String[] args) {
-		int dx[] = {0,1,1,1}; // 오른쪽 , 아래 , 왼아래대각, 오른아래대각
+		int dx[] = {0,1,1,1}; 
 		int dy[] = {1,0,1,-1};
 		Scanner sc = new Scanner(System.in);
 		int[][] arr = new int[19][19];
