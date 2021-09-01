@@ -41,9 +41,6 @@ public class D3_Solution_1860 {
 				}else {
 					K--;
 				}
-				
-				
-				
 			}
 			System.out.println("#"+t +" " + "Possible");
 		}
