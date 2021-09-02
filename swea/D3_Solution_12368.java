@@ -20,5 +20,6 @@ public class D3_Solution_12368 {
 			
 			System.out.println("#"+t+ " " + A);
 		}
+		sc.close();
 	}
 }
