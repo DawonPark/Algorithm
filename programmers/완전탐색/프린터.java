@@ -6,8 +6,7 @@ import java.util.*;
  * -> queue만 사용하려했는데 그때 가장 높은 순위인 지 확인하기위해서 LinkedList를 사용함
  * 
  */
-
-class Solution {
+public class 프린터 {
     class Pair{
         int p;
         int index;
