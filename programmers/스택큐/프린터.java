@@ -1,4 +1,4 @@
-package programmers.완전탐색;
+package programmers.스택큐;
 import java.util.*;
 /*
  * programmers - 프린터
