@@ -2,8 +2,6 @@ package programmers.스택큐;
 
 import java.util.*;
 
-
-
 class 기능개발 {
     static LinkedList<int[]> queue;
     public int[] solution(int[] progresses, int[] speeds) {
