@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
-/*
+/**
  * 백준 1149 RGB 거리
  *
  *- DP로 각집마다 색깔을 칠했을떄의 최소를 구함.

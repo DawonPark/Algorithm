@@ -3,7 +3,7 @@ package baekjoon;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-/*
+/**
  * 시간 초과가 많아서 조건 하나라도 줄이기 위해서 많은 시간이 듬
  */
 public class Main_1074 {

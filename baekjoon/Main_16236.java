@@ -111,7 +111,6 @@ public class Main_16236 {
 			if(list.isEmpty()) {
 				return;
 			}
-			
 			Collections.sort(list, (a,b)-> {
 				if(a.d== b.d) {	// 거리가 같으면 문제점의 정렬을 해야함.
 					if (a.x == b.x) { // 같이 위쪽에 있으면

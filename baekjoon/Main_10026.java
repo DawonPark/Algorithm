@@ -3,7 +3,7 @@ package baekjoon;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-/*
+/**
  * 백준 10026 - 적록색약
  * 
  * -> 그림의 같은 색 구역을 구하는데 dfs로 탐색해서 구분을 함

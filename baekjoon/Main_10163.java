@@ -1,7 +1,7 @@
 package baekjoon;
 
 import java.util.Scanner;
-/*
+/**
  * 백준 10163 - 색종이
  * 
  * -> 겹치는 부분을 번호로 줘서 계속 값을 넣어줘서 해결

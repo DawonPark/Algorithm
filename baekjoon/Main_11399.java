@@ -2,7 +2,7 @@ package baekjoon;
 
 import java.util.Arrays;
 import java.util.Scanner;
-/*
+/**
  * 백준 11399 - ATM 퀴즈
  * 
  * -> 줄을 기다린 시간의 총합이므로 최소는 sort후 기다린 시간만큼 더해줌
