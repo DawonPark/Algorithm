@@ -21,7 +21,7 @@ public class D3_Solution_4615 {
 			map[N/2-1][N/2] = 1;
 			map[N/2][N/2-1] = 1;
 			map[N/2][N/2] = 2;
-			int[] dx = {0,0,1,-1,-1,-1,1,1 };
+			int[] dx = {0,0,1,-1,-1,-1,1,1};
 			int[] dy = {1,-1,0,0,-1,1,-1,1};
 			for(int i = 0; i<M; i++) {
 				st = new StringTokenizer(br.readLine());
@@ -34,11 +34,11 @@ public class D3_Solution_4615 {
 					boolean check = false;
 					int nx = x-1,  ny=y-1;
 					while(true) {
-						 nx = nx+dx[d];
-						 ny = ny+dy[d];
+						nx = nx+dx[d];
+						ny = ny+dy[d];
 						if(nx<0 || nx>=N || ny<0 || ny>=N ) break;
 						list.add(new int[] {nx,ny});
-						if(map[nx][ny]== 0) break;
+						if(map[nx][ny] == 0) break;
 						if(map[nx][ny] == color) {
 							check= true;
 							break;
@@ -54,9 +54,9 @@ public class D3_Solution_4615 {
 			int black =0, white =0;
 			for(int i=0; i<N; i++) {
 				for(int j=0; j<N; j++) {
-					if(map[i][j]==1) {
+					if(map[i][j] == 1) {
 						black++;
-					}else if(map[i][j]==2) {
+					}else if(map[i][j] == 2) {
 						white++;
 					}
 				}
