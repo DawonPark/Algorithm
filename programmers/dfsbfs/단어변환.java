@@ -39,8 +39,8 @@ public class 단어변환 {
             if(count==1){
                 if(!visited[index]){
                     visited[index]= true;
-                    s = arr[index];
-                    dfs(cnt+1,s);
+                    dfs(cnt+1,arr[index]);
+                    visited[index]= false;
                 }
             }
         }
