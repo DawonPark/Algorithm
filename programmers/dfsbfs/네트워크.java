@@ -17,7 +17,6 @@ public class 네트워크 {
                 dfs(i);
             }
         }
-
         return answer;
     }
     
