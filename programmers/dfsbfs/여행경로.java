@@ -20,6 +20,7 @@ public class 여행경로 {
         list = new ArrayList<>();
         dfs(0,tickets,"ICN" , "ICN");
         Collections.sort(list);
+        
         return list.get(0).split(" ");
     }
     
