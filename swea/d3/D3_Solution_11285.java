@@ -8,7 +8,7 @@ import java.util.Scanner;
 	
 	-> 원의거리 피타고라스로 이용해서 구해서 계산
  */
-public class D3_Solution_12285 {
+public class D3_Solution_11285 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int T = sc.nextInt();

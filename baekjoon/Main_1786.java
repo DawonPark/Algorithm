@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Main_1786 {
@@ -19,13 +20,14 @@ public class Main_1786 {
 			while(j>0 && pattern[i]!= pattern[j]) j = pi[j-1];
 			if(pattern[i] == pattern[j]) pi[i]= ++j;
 		}
+		System.out.println(Arrays.toString(pi));
 		List<Integer> list = new ArrayList<>(); 
 		for(int i=0,j=0; i<text.length; i++) {
 			while(j>0 && text[i]!= pattern[j]) j = pi[j-1];
 			if(text[i] == pattern[j]) {
 				if(j==pattern.length-1) {
 					cnt++;
-					list.add(i-pattern.length+2);
+					list.add(i);
 					j= pi[j];
 				}
 				else {
@@ -37,6 +39,7 @@ public class Main_1786 {
 		System.out.println(cnt);
 		for(int ans : list) {
 			System.out.print(ans + " ");
+			System.out.println(text[ans]);
 		}
 	}
 }
