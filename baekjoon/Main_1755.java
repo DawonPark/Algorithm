@@ -1,3 +1,5 @@
+package baekjoon;
+
 import java.util.Arrays; // sort를 사용하기 위해서 import
 import java.util.Scanner; // 스캐너 import
 
