@@ -26,7 +26,7 @@ public class Main_4485 {
 				}
 			}
 			Queue<int[]> q = new LinkedList<int[]>();
-			q.add(new int[] {0,0,map[0][0]});
+			q.add(new int[] {0,0});
 			cost[0][0] = map[0][0];
 			int dx[] = {-1,1,0,0};
 			int dy[] = {0,0,-1,1};
@@ -38,7 +38,7 @@ public class Main_4485 {
 					if(nx<0 || nx>=N || ny<0 || ny>=N) continue;
 					if(map[nx][ny] + cost[data[0]][data[1]] < cost[nx][ny]) {
 						cost[nx][ny] = map[nx][ny] + cost[data[0]][data[1]];
-						q.add(new int[] {nx,ny,cost[nx][ny]});
+						q.add(new int[] {nx,ny});
 					}
 				}
 			}
