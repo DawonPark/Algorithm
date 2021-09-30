@@ -11,4 +11,4 @@ SW Expert Academy
 JUNGOL
 
 # 목표
-하루에 한 문제 풀기
+하루에 한 문제 이상 풀기
