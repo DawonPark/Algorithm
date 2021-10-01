@@ -3,7 +3,6 @@ package swea.swtest;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class SWTest_Solution_4013 {
@@ -14,7 +13,6 @@ public class SWTest_Solution_4013 {
 			int K = Integer.parseInt(br.readLine());
 			int[][] magnets = new int[5][9];
 			int[][] tempM = new int[5][9];
-			
 			for(int i=1; i<=4; i++) {
 				StringTokenizer st =new StringTokenizer(br.readLine());
 				for(int j = 1; j<=8; j++) {
@@ -22,7 +20,6 @@ public class SWTest_Solution_4013 {
 					tempM[i][j] = magnets[i][j];
 				}
 			}
-			
 			for(int i=0; i<K; i++) {
 					StringTokenizer st =new StringTokenizer(br.readLine());
 					int n = Integer.parseInt(st.nextToken());
@@ -51,7 +48,6 @@ public class SWTest_Solution_4013 {
 							}
 						}else break;
 					}
-					
 					if(r==1) {
 						rotate1(magnets,n);
 					}else {
