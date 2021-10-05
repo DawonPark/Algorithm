@@ -118,6 +118,5 @@ public class jungol_1733 {
 		}
 		
 		System.out.println("0");
-		
 	}
 }
