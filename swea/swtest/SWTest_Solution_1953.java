@@ -54,25 +54,21 @@ public class SWTest_Solution_1953 {
 						ans++;
 						visited[nx][ny] = true;
 						q.add(new int[] {nx,ny,time+1});
-//						System.out.println(nx + " " + ny + ", " + (time+1));
 					}
 					if(d==1 && check[map[x][y]-1][1] && check[map[nx][ny]-1][0]) {
 						ans++;
 						visited[nx][ny] = true;
 						q.add(new int[] {nx,ny,time+1});
-//						System.out.println(nx + " " + ny+ ", " + (time+1));
 					}
 					if(d==2 && check[map[x][y]-1][2] && check[map[nx][ny]-1][3]) {
 						ans++;
 						visited[nx][ny] = true;
 						q.add(new int[] {nx,ny,time+1});
-//						System.out.println(nx + " " + ny + ", " + (time+1));
 					}
 					if(d==3 && check[map[x][y]-1][3] && check[map[nx][ny]-1][2]) {
 						ans++;
 						visited[nx][ny] = true;
 						q.add(new int[] {nx,ny,time+1});
-//						System.out.println(nx + " " + ny +", " + (time+1));
 					}
 				}
 			}
