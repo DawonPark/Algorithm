@@ -14,13 +14,13 @@ outer: for (int t = 1; t <= T; t++) {
 				char ch = s.charAt(i);
 				if (ch == '(') stack.push(ch);
 				else if (ch == ')' && stack.isEmpty()) {
-					System.out.println("No");
+					System.out.println("NO");
 					continue outer;
 				} else if (ch == ')' && !stack.isEmpty()) {
 					stack.pop();
 				}
 			}
-			String ans = stack.isEmpty() ? "Yes" : "No";
+			String ans = stack.isEmpty() ? "YES" : "NO";
 			System.out.println(ans);
 
 		}
