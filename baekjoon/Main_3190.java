@@ -12,18 +12,12 @@ public class Main_3190 {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int N = Integer.parseInt(br.readLine());
 		int K = Integer.parseInt(br.readLine());
-		int[][] map = new int[N][N];
+		int[][] map = new int[N+2][N+2];
 		for(int i=0; i<K; i++) {
 			String[] data = br.readLine().split(" ");
-			System.out.println(Integer.parseInt(data[0]) + " " + Integer.parseInt(data[1]));
 			map[Integer.parseInt(data[0])][Integer.parseInt(data[1])] = 1;
 		}
-		for(int i=0; i<N; i++) {
-			for(int j =0; j<N; j++) {
-				System.out.print(map[i][j]);
-			}
-			System.out.println();
-		}
+		
 		int L = Integer.parseInt(br.readLine());
 		char[] command = new char[L];
 		int[] commandt = new int[L];
@@ -32,7 +26,7 @@ public class Main_3190 {
 			commandt[i] = Integer.parseInt(data[0]);
 			command[i] = data[1].charAt(0);
 		}
-		int ans =1;
+		int ans =0;
 		int x = 1;
 		int y = 1;
 		int dir = 0;
@@ -42,6 +36,14 @@ public class Main_3190 {
 		List<int[]> snake = new LinkedList<>();
 		snake.add(new int[] {x,y});
 		while(true) {
+			System.out.println(ans);
+			for(int i=1; i<=N; i++) {
+				for(int j =1; j<=N; j++) {
+					System.out.print(map[i][j]);
+				}
+				System.out.println();
+			}
+			System.out.println();
 			for(int i = 0; i<command.length; i++) {
 				if(ans == commandt[i]) {
 					if(command[i] ==  'L') {
@@ -57,8 +59,14 @@ public class Main_3190 {
 			}
 			x +=dx[dir%4];
 			y +=dy[dir%4];
-			if(x <=0 || x>=N-1 || y<=0 || y >=N-1) break;
-			if(map[x][y] == 2) break;
+			if(x <=0 || x>N || y<=0 || y >N) {
+				ans++;
+				break;
+			}
+			if(map[x][y] == 2) {
+				ans++;
+				break;
+			}
 			if(map[x][y] == 1) {
 				map[x][y] = 2;
 			}else {
@@ -69,7 +77,7 @@ public class Main_3190 {
 			snake.add(new int[] {x,y});
 			ans++;
 		}
-		System.out.println(ans+1);
+		System.out.println(ans);
 		
 	}
 }
