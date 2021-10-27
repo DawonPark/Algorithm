@@ -36,14 +36,14 @@ public class Main_3190 {
 		List<int[]> snake = new LinkedList<>();
 		snake.add(new int[] {x,y});
 		while(true) {
-			System.out.println(ans);
-			for(int i=1; i<=N; i++) {
-				for(int j =1; j<=N; j++) {
-					System.out.print(map[i][j]);
-				}
-				System.out.println();
-			}
-			System.out.println();
+//			System.out.println(ans);
+//			for(int i=1; i<=N; i++) {
+//				for(int j =1; j<=N; j++) {
+//					System.out.print(map[i][j]);
+//				}
+//				System.out.println();
+//			}
+//			System.out.println();
 			for(int i = 0; i<command.length; i++) {
 				if(ans == commandt[i]) {
 					if(command[i] ==  'L') {
