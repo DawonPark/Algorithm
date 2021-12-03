@@ -1,7 +1,5 @@
 package baekjoon;
 
-import java.util.LinkedList;
-import java.util.Queue;
 import java.util.Scanner;
 
 public class Main_20055 {	
@@ -25,7 +23,7 @@ public class Main_20055 {
 				}
 			}
 			int temp = map[2*N-1];
-			for(int i= 2*N-1; i>0; i-- ) {
+			for(int i= 2*N-1; i>0; i--) {
 				map[i] = map[i-1];
 			}
 			map[0] = temp;
@@ -35,7 +33,6 @@ public class Main_20055 {
 			check[0] = false;
 			check[N-1] = false;
 			
-			Queue<Integer> queue = new LinkedList<>();
 			for(int i =N-1; i>=0; i--) {
 				if(check[i]) {
 					int idx = i+1;
