@@ -24,7 +24,7 @@ public class Main_10025 {
 			if(i<window) {
 				sum+=arr[i];
 			}else {
-                sum+=arr[i];
+                sum+=arr[i];  
 				sum-=arr[i-window];
 			}
 			if(sum > ans) {
