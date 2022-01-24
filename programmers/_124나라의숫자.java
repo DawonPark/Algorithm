@@ -1,4 +1,4 @@
-
+package programmers;
 public class _124나라의숫자 {
 	class Solution {
 	    public String solution(int n) {

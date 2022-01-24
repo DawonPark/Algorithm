@@ -2,7 +2,7 @@ package programmers.스택큐;
 
 import java.util.*;
 
-class 기능개발 {
+class Solution {
     static LinkedList<int[]> queue;
     public int[] solution(int[] progresses, int[] speeds) {
         queue = new LinkedList<>();
@@ -36,9 +36,7 @@ class 기능개발 {
             answer[i] = temp[i];
         }
         answer[size] = ans;
-        
-        
-        
+              
         return answer;
     }
 }
