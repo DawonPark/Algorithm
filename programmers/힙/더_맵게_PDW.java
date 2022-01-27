@@ -2,7 +2,7 @@ package programmers.힙;
 
 import java.util.*;
 
-public class 더맵게 {
+public class 더_맵게_PDW {
     public int solution(int[] scoville, int K) {
         int answer = 0;
         PriorityQueue<Integer> pq = new PriorityQueue<>();
