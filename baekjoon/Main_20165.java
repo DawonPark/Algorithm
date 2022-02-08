@@ -70,11 +70,6 @@ public class Main_20165 {
 			}
 			System.out.println();
 		}
-	
-		
-		
-		
-		
 	}
 
 
