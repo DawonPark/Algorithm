@@ -139,7 +139,6 @@ outer: 	for(int i=0; i<N; i++) {
 				sum = map[i][j] + map[i+1][j] + map[i+2][j] + map[i+1][j+1];
 				ans =Math.max(ans, sum);
 				sum = map[i+1][j] + map[i][j+1] + map[i+1][j+1] + map[i+2][j+1];
-				System.out.println(sum + " " + i + " " + j);
 				ans =Math.max(ans, sum);
 			}
 		}		
