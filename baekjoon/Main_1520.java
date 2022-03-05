@@ -27,7 +27,6 @@ public class Main_1520 {
 			}
 		}
 		System.out.println(solve(0,0));
-		System.out.println(Arrays.deepToString(visited));
 	}
 	private static int solve(int i, int j) {
 		if(i==N-1 && j ==M-1) {
