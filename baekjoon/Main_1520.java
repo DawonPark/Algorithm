@@ -27,11 +27,13 @@ public class Main_1520 {
 			}
 		}
 		System.out.println(solve(0,0));
+		System.out.println();
 	}
 	private static int solve(int i, int j) {
 		if(i==N-1 && j ==M-1) {
 			return 1;
 		}
+		System.out.println(i +  " : " + j);
 		if(visited[i][j] != -1) return visited[i][j];
 		visited[i][j] = 0;
 		
