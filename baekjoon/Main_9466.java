@@ -36,7 +36,6 @@ public class Main_9466 {
 		
 		if(isVisited[to]) {
 			if(!isFinished[to]) {
-				System.out.println(i);
 				ans++;
 				while(i!= to) {
 					ans++;
