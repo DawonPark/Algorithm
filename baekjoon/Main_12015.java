@@ -33,7 +33,9 @@ public class Main_12015 {
                     }
                 }
                 list.set(right, item);
+//                System.out.println(left + " " + right);
             }
+            System.out.println(list);
         }
         System.out.println(list.size() - 1);
     }
