@@ -11,6 +11,12 @@ public class Main_7569 {
 		int M = sc.nextInt();
 		int N = sc.nextInt();
 		int H = sc.nextInt();
+		map = new int[N][M];
+		for(int i=0; i<N; i++) {
+			for(int j=0; j<M; j++) {
+				map[i][j]=sc.nextInt();
+			}
+		}
 		
 	}
 }
