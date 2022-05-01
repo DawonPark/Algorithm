@@ -6,8 +6,6 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 public class Main_1644 {
-
-	
 	public static void main(String[] args) throws IOException {
 		boolean prime[];
 		ArrayList<Integer> list = new ArrayList<>();
@@ -15,12 +13,18 @@ public class Main_1644 {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
    
-   		// 1. 소수 구하기
-        prime = new boolean[N+1];        
-        prime[0] = prime[1] = true;       
+   		prime = new boolean[N+1];        
+        prime[0] = true;
+        prime[1] = true;
+        // 소수가 되는 수의 배수를 지우면 남은 건 소수 (에라토스테네스의 체)
         for(int i=2; i*i<=N; i++){
-            if(!prime[i]) for(int j=i*i; j<=N; j+=i) prime[j]=true;                
+            if(!prime[i]) {
+            	for(int j=i*i; j<=N; j+=i) {
+            		prime[j]=true;                
+            	}
+            }
         }            
+        
         for(int i=1; i<=N;i++){
         	if(!prime[i])list.add(i);     
         }
