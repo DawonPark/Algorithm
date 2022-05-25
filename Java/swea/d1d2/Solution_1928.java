@@ -1,4 +1,4 @@
-package swea.d1d2;
+package java. swea.d1d2;
 
 import java.util.Scanner;
 import java.util.Base64;

@@ -1,4 +1,4 @@
-package baekjoon;
+package java. java.baekjoon;
 
 import java.util.Scanner;
 
@@ -7,21 +7,21 @@ public class Main_1546 {
 		Scanner sc = new Scanner(System.in);
 		int num = sc.nextInt();
 		double score[] = new double[num];
-		double max =Double.MIN_VALUE;
-		for(int i=0; i<num; i++) {
-			score[i]= sc.nextInt();
-			if(score[i]>max) {
-				max= score[i];
+		double max = Double.MIN_VALUE;
+		for (int i = 0; i < num; i++) {
+			score[i] = sc.nextInt();
+			if (score[i] > max) {
+				max = score[i];
 			}
 		}
-		
-		double result =0;
-		for(double d : score) {
-			d = d/max*100;
-			result +=d;
+
+		double result = 0;
+		for (double d : score) {
+			d = d / max * 100;
+			result += d;
 		}
-	
-		result =result/score.length;
+
+		result = result / score.length;
 		System.out.println(result);
 		sc.close();
 	}

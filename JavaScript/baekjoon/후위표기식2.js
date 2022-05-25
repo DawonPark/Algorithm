@@ -5,7 +5,6 @@ let input = fs.readFileSync(filePath).toString().replace(/\r/g, "").split("\n");
 const stack = [];
 const N = Number(input[0]);
 const num = [];
-console.log(input);
 for (let i = 2; i < 2 + N; i++) {
   num[i - 2] = Number(input[i]);
 }

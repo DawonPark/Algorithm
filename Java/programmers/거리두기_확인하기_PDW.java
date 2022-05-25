@@ -1,4 +1,4 @@
-package programmers;
+package java. java.programmers;
 import java.util.*;
 public class 거리두기_확인하기_PDW {
 	class Solution {

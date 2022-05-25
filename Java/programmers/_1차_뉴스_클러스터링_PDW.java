@@ -1,4 +1,4 @@
-package programmers;
+package java. java.programmers;
 import java.util.*;
 public class _1차_뉴스_클러스터링_PDW {
 	 public int solution(String str1, String str2) {

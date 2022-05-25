@@ -1,6 +1,7 @@
-package baekjoon;
+package java. java.baekjoon;
 
 import java.util.Scanner;
+
 /*
  * 백준 14696 - 딱지놀이
  * 
@@ -9,32 +10,31 @@ import java.util.Scanner;
 public class Main_14696 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int N =Integer.parseInt(sc.nextLine());
+		int N = Integer.parseInt(sc.nextLine());
 		int[][] A = new int[N][5];
-		int[][] B = new int[N][5]; 
-		for(int i=0; i<N; i++) {
+		int[][] B = new int[N][5];
+		for (int i = 0; i < N; i++) {
 			int a = sc.nextInt();
-			for(int j=0; j<a; j++) {
+			for (int j = 0; j < a; j++) {
 				A[i][sc.nextInt()]++;
 			}
-			 a = sc.nextInt();
-			for(int j=0; j<a; j++) {
+			a = sc.nextInt();
+			for (int j = 0; j < a; j++) {
 				B[i][sc.nextInt()]++;
 			}
-			
-			
-			for(int j=4; j>=1; j--) {
-				if(A[i][j] > B[i][j]) {
+
+			for (int j = 4; j >= 1; j--) {
+				if (A[i][j] > B[i][j]) {
 					System.out.println("A");
 					break;
-				}else if( B[i][j]> A[i][j]) {
+				} else if (B[i][j] > A[i][j]) {
 					System.out.println("B");
 					break;
-				}else if(j==1) {
+				} else if (j == 1) {
 					System.out.println("D");
 				}
 			}
-			
+
 		}
 		sc.close();
 	}

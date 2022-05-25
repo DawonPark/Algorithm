@@ -1,4 +1,4 @@
-package programmers;
+package java. java.programmers;
 import java.util.*;
 public class 리틀_프렌즈_사천성_PDW {
     static int N = 0;

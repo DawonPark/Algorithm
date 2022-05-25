@@ -1,4 +1,4 @@
-package programmers;
+package java. java.programmers;
 
 public class 예상_대진표 {
 	class Solution

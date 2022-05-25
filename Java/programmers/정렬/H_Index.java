@@ -1,4 +1,4 @@
-package programmers.정렬;
+package java. programmers.정렬;
 import java.util.*;
 
 public class H_Index {

@@ -1,4 +1,4 @@
-package programmers;
+package java. java.programmers;
 import java.util.*;
 public class 신고_결과_받기 {
 	  public int[] solution(String[] id_list, String[] report, int k) {

@@ -1,4 +1,4 @@
-package programmers;
+package java. java.programmers;
 
 public class N개의최소공배수 {
 	class Solution {

@@ -1,4 +1,4 @@
-package programmers;
+package java. java.programmers;
 import java.util.*;
 public class 가장_먼_노드_PDW {
 	public int solution(int n, int[][] edge) {

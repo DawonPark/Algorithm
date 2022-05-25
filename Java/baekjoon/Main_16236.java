@@ -1,4 +1,4 @@
-package baekjoon;
+package java. java.baekjoon;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,6 +8,7 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
+
 /*
  * 백준 16236 아기 상어
  * 
@@ -24,7 +25,7 @@ public class Main_16236 {
 	static int[] dy = { 0, -1, 1, 0 };
 
 	static class Pair {
-		int x, y , d;
+		int x, y, d;
 
 		public Pair(int x, int y) {
 			super();
@@ -78,16 +79,15 @@ public class Main_16236 {
 
 		while (true) {
 			int isVisited[][] = new int[N][N];
-			ArrayList<Pair> list = new ArrayList<>(); // -> 그 시점에 잡을 수  물고기들 리스트
-			if(count == size) {
+			ArrayList<Pair> list = new ArrayList<>(); // -> 그 시점에 잡을 수 물고기들 리스트
+			if (count == size) {
 				size++;
-				count =0;
+				count = 0;
 			}
 			while (!queue.isEmpty()) {
 				Pair current = queue.poll();
 				/*
-				 * 00901 -> bfs안에 재귀를 돌리면 문제가 생기는 경우 -> 재귀 사용 불가능 거리가 같을 때 문제
-				 * 01000
+				 * 00901 -> bfs안에 재귀를 돌리면 문제가 생기는 경우 -> 재귀 사용 불가능 거리가 같을 때 문제 01000
 				 * 
 				 */
 				for (int d = 0; d < 4; d++) {
@@ -102,33 +102,32 @@ public class Main_16236 {
 					}
 					if (map[nx][ny] > 0 && map[nx][ny] < size) { // 먹을 수 있다면
 
-						list.add(new Pair(nx,ny,isVisited[nx][ny]));
+						list.add(new Pair(nx, ny, isVisited[nx][ny]));
 
 					}
 				}
 
 			}
-			if(list.isEmpty()) {
+			if (list.isEmpty()) {
 				return;
 			}
-			Collections.sort(list, (a,b)-> {
-				if(a.d== b.d) {	// 거리가 같으면 문제점의 정렬을 해야함.
+			Collections.sort(list, (a, b) -> {
+				if (a.d == b.d) { // 거리가 같으면 문제점의 정렬을 해야함.
 					if (a.x == b.x) { // 같이 위쪽에 있으면
 						return a.y - b.y; // 왼쪽 부터 -> 내림차순
 					}
 					return a.x - b.x; // 아니면 위쪽 부터 -> 내림차순
-				}
-				else return a.d - b.d;
+				} else
+					return a.d - b.d;
 			});
-			
-			ans+= list.get(0).d;
+
+			ans += list.get(0).d;
 			count++;
-			map[list.get(0).x][list.get(0).y]=0;
-			
+			map[list.get(0).x][list.get(0).y] = 0;
+
 			queue.add(new Pair(list.get(0).x, list.get(0).y));
-			
+
 		}
-		
 
 	}
 

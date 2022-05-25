@@ -1,4 +1,4 @@
-package jungol;
+package java. java.jungol;
 
 import java.io.BufferedReader;
 import java.io.IOException;

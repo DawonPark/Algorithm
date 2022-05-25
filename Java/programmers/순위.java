@@ -1,4 +1,4 @@
-package programmers;
+package java. java.programmers;
 
 public class 순위 {
 	 public int solution(int n, int[][] results) {

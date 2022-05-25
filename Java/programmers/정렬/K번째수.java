@@ -1,4 +1,4 @@
-package programmers.정렬;
+package java. programmers.정렬;
 import java.util.*;
 public class K번째수 {
 	   public int[] solution(int[] array, int[][] commands) {

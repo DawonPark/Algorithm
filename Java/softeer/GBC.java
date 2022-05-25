@@ -1,4 +1,4 @@
-package softeer;
+package java.softeer;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -48,4 +48,5 @@ public class GBC {
 	        }
 	 
 	        System.out.println(answer);
+	    }
 }

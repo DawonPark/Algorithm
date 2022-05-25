@@ -1,4 +1,4 @@
-package baekjoon;
+package java. java.baekjoon;
 
 import java.util.Scanner;
 
@@ -17,7 +17,7 @@ public class Main_1062 {
 
 		for (int i = 0; i < N; i++) {
 			String word = sc.nextLine();
-			word = word.substring(4,word.length() -4);
+			word = word.substring(4, word.length() - 4);
 			words[i] = word;
 		}
 
@@ -32,7 +32,7 @@ public class Main_1062 {
 			isRead['t' - 'a'] = true;
 			isRead['i' - 'a'] = true;
 			isRead['c' - 'a'] = true;
-	
+
 			read(0, 0);
 			System.out.println(ans);
 		}
@@ -50,17 +50,18 @@ public class Main_1062 {
 						break;
 					}
 				}
-				if(flag) sum++;
+				if (flag)
+					sum++;
 			}
-			ans = Math.max( ans , sum);
+			ans = Math.max(ans, sum);
 
 			return;
 		}
 
 		for (int i = start; i < 26; i++) {
-			if(isRead[i] == false) {
+			if (isRead[i] == false) {
 				isRead[i] = true;
-				read(i, cnt+1);
+				read(i, cnt + 1);
 				isRead[i] = false;
 			}
 		}

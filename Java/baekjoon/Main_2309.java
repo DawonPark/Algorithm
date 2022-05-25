@@ -1,7 +1,8 @@
-package baekjoon;
+package java. java.baekjoon;
 
 import java.util.Arrays;
 import java.util.Scanner;
+
 /*
  * 백준 2309 일곱 난쟁이
  * 
@@ -11,40 +12,41 @@ public class Main_2309 {
 	static int[] smurf;
 	static int[] answer;
 	static boolean check;
+
 	public static void main(String[] args) {
-		 smurf = new int[9];
-		 answer = new int[7];
+		smurf = new int[9];
+		answer = new int[7];
 		Scanner sc = new Scanner(System.in);
-		for(int i=0; i<9; i++) {
+		for (int i = 0; i < 9; i++) {
 			smurf[i] = sc.nextInt();
 		}
 		Arrays.sort(smurf);
-		combination(0,0);
-		
+		combination(0, 0);
+
 	}
 
 	private static void combination(int start, int cnt) {
-		if(check==true) return;
-		if(cnt == 7) {
-			int sum =0;
-			for(int k : answer) {
-				sum+=k;
+		if (check == true)
+			return;
+		if (cnt == 7) {
+			int sum = 0;
+			for (int k : answer) {
+				sum += k;
 			}
-			if(sum!=100) return;
-			check=true;
-			for(int k : answer) {
+			if (sum != 100)
+				return;
+			check = true;
+			for (int k : answer) {
 				System.out.println(k);
 			}
 			return;
 		}
-		
-		for(int i = start; i<9; i++) {
+
+		for (int i = start; i < 9; i++) {
 			answer[cnt] = smurf[i];
-			combination(i+1,cnt+1);
+			combination(i + 1, cnt + 1);
 		}
-		
-		
+
 	}
-	
-	
+
 }

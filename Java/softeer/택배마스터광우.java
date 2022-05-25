@@ -1,4 +1,4 @@
-package softeer;
+package java. softeer;
 
 import java.util.*;
 import java.io.*;

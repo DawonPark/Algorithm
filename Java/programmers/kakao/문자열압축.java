@@ -1,4 +1,4 @@
-package programmers.kakao;
+package java.programmers.kakao;
 
 public class 문자열압축 {
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package baekjoon;
+package java. java.baekjoon;
 
 import java.util.Scanner;
 /*
@@ -10,28 +10,29 @@ import java.util.Scanner;
 public class Main_1592 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int N = sc.nextInt(); 
-		int M = sc.nextInt(); 
+		int N = sc.nextInt();
+		int M = sc.nextInt();
 		int L = sc.nextInt();
-		int[] circle = new int[N+1];
+		int[] circle = new int[N + 1];
 		int idx = 1;
 		circle[idx]++;
 		int count = 0;
-		while(true) {
-			if(circle[idx]%2 ==1) {// 홀수면
-				idx = idx+L;
-				if(idx>N-1) {
-					idx-=N;
+		while (true) {
+			if (circle[idx] % 2 == 1) {// 홀수면
+				idx = idx + L;
+				if (idx > N - 1) {
+					idx -= N;
 				}
-			}else {
-				idx = idx-L;
-				if(idx<0) {
-					idx+= N;
+			} else {
+				idx = idx - L;
+				if (idx < 0) {
+					idx += N;
 				}
 			}
 			count++;
-			if(++circle[idx] == M) break;
-			
+			if (++circle[idx] == M)
+				break;
+
 		}
 		System.out.println(count);
 		sc.close();

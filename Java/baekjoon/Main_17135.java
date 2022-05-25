@@ -1,4 +1,5 @@
-package baekjoon;
+package java. java.baekjoon;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -23,95 +24,96 @@ public class Main_17135 {
 	static boolean[] isAlive;
 	static int[] archer = new int[3];
 	static int result;
-	
+
 	public static void main(String[] args) throws IOException {
-		BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String data[] = br.readLine().split(" ");
-		 N =Integer.parseInt(data[0]);
-		 M =Integer.parseInt(data[1]);
-		 D =Integer.parseInt(data[2]);
-		 for(int i=0; i<N; i++) {
-			 data = br.readLine().split(" ");
-			 for(int j=0; j<M; j++) {
-				 if(Integer.parseInt(data[j]) == 1) enemy.add(new int[] {i,j});
-			 }
-		 }
-		 tempList = (ArrayList<int[]>) enemy.clone();
-		
-		 result=0;
-		 combi(0,0);
-		 System.out.println(result);
-		
+		N = Integer.parseInt(data[0]);
+		M = Integer.parseInt(data[1]);
+		D = Integer.parseInt(data[2]);
+		for (int i = 0; i < N; i++) {
+			data = br.readLine().split(" ");
+			for (int j = 0; j < M; j++) {
+				if (Integer.parseInt(data[j]) == 1)
+					enemy.add(new int[] { i, j });
+			}
+		}
+		tempList = (ArrayList<int[]>) enemy.clone();
+
+		result = 0;
+		combi(0, 0);
+		System.out.println(result);
+
 	}
-	
+
 	static void combi(int start, int cnt) {
-		if(cnt == 3) {
+		if (cnt == 3) {
 			attack();
 			return;
 		}
-		for(int i= start; i<M; i++) {
-			
-			archer[cnt]=i;
-			combi(i+1, cnt+1);
+		for (int i = start; i < M; i++) {
+
+			archer[cnt] = i;
+			combi(i + 1, cnt + 1);
 		}
 	}
 
 	private static void attack() {
-		int temp =0;
+		int temp = 0;
 		enemy = (ArrayList<int[]>) tempList.clone();
-		for(int k =0; k<N; k++) {
-			int[] die = {-1,-1,-1};
-			HashSet<Integer> hs = new HashSet<>();	
-			for(int i=0; i<3; i++) {// 3번의 공격
-				int x= -1;
-				int y= -1;
+		for (int k = 0; k < N; k++) {
+			int[] die = { -1, -1, -1 };
+			HashSet<Integer> hs = new HashSet<>();
+			for (int i = 0; i < 3; i++) {// 3번의 공격
+				int x = -1;
+				int y = -1;
 				int distance = Integer.MAX_VALUE;
-				int tempDistance =0;
-				int idx =-1;
-				for(int j=0; j<enemy.size(); j++) {
-					if(N - (enemy.get(j)[0]+k) <=0) {
+				int tempDistance = 0;
+				int idx = -1;
+				for (int j = 0; j < enemy.size(); j++) {
+					if (N - (enemy.get(j)[0] + k) <= 0) {
 						continue;
 					}
-					tempDistance = Math.abs((N - (enemy.get(j)[0]+k)))+ Math.abs(archer[i]-enemy.get(j)[1]);
-					if( tempDistance <=D ) {
-							if(tempDistance < distance) {
-								 x = enemy.get(j)[0]+k;
-								 y = enemy.get(j)[1];
-								 distance = tempDistance;
-								 idx =j;
-						} if(tempDistance == distance) {
-							if(y>enemy.get(j)[1]){
+					tempDistance = Math.abs((N - (enemy.get(j)[0] + k))) + Math.abs(archer[i] - enemy.get(j)[1]);
+					if (tempDistance <= D) {
+						if (tempDistance < distance) {
+							x = enemy.get(j)[0] + k;
+							y = enemy.get(j)[1];
+							distance = tempDistance;
+							idx = j;
+						}
+						if (tempDistance == distance) {
+							if (y > enemy.get(j)[1]) {
 								y = enemy.get(j)[1];
-								idx =j;
+								idx = j;
 							}
 						}
 					}
 				}
-				
-				if(x!=-1&&y!=-1&&idx!=-1) {
+
+				if (x != -1 && y != -1 && idx != -1) {
 					hs.add(idx);
 				}
-				x=-1;
-				y=-1;
+				x = -1;
+				y = -1;
 				idx = -1;
 			}
-			
-			temp+= hs.size();
-			Iterator iter = hs.iterator(); 
-			int arr [] = new int[hs.size()];
-			int i =0;
-			while(iter.hasNext()) {
-				arr[i++]= (int) iter.next();
+
+			temp += hs.size();
+			Iterator iter = hs.iterator();
+			int arr[] = new int[hs.size()];
+			int i = 0;
+			while (iter.hasNext()) {
+				arr[i++] = (int) iter.next();
 			}
 			Arrays.sort(arr);
-			for(int j=0; j<arr.length; j++) {
-				enemy.remove(arr[j]-j);
+			for (int j = 0; j < arr.length; j++) {
+				enemy.remove(arr[j] - j);
 			}
-	
-	
+
 		}
-		
+
 		result = Math.max(temp, result);
 	}
-	
+
 }

@@ -1,4 +1,4 @@
-package programmers;
+package java. java.programmers;
 
 public class 피로도 {
 	int K, R, ans;

@@ -1,4 +1,4 @@
-package swea.d3;
+package java. swea.d3;
 
 import java.util.Scanner;
 /*	퀴즈 대회에 참가해서 우승을 하게 되면 보너스 상금을 획득할 수 있는 기회를 부여받는다

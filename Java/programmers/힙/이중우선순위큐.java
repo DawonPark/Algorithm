@@ -1,4 +1,4 @@
-package programmers.힙;
+package java. programmers.힙;
 import java.util.*;
 public class 이중우선순위큐 {
     public int[] solution(String[] operations) {

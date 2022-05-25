@@ -1,4 +1,4 @@
-package programmers;
+package java. java.programmers;
 import java.util.*;
 
 public class 빛의_경로_사이클_PDW {

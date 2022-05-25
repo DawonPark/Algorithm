@@ -1,4 +1,4 @@
-package programmers.kakao;
+package java.programmers.kakao;
 /*
  * String에 replace 를 사용한다면 더 간단함
  */

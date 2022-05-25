@@ -1,4 +1,4 @@
-package baekjoon;
+package java. java.baekjoon;
 
 import java.util.Scanner;
 
@@ -15,14 +15,15 @@ public class Main_2563 {
 		boolean[][] paper = new boolean[101][101];
 		int n = sc.nextInt();
 		int count = 0;
-		for(int i=0; i<n; i++) {
+		for (int i = 0; i < n; i++) {
 			int x = sc.nextInt();
 			int y = sc.nextInt();
-			for(int r=1; r<=10; r++) {
-				for(int c=1;c<=10; c++) {
-					if(paper[x+r][y+c]== true) continue;
-					else if(paper[x+r][y+c]==false) {
-						paper[x+r][y+c] = true;
+			for (int r = 1; r <= 10; r++) {
+				for (int c = 1; c <= 10; c++) {
+					if (paper[x + r][y + c] == true)
+						continue;
+					else if (paper[x + r][y + c] == false) {
+						paper[x + r][y + c] = true;
 						count++;
 					}
 				}

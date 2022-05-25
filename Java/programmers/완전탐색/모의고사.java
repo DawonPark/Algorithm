@@ -1,4 +1,4 @@
-package programmers.완전탐색;
+package java. programmers.완전탐색;
 import java.util.*;
 /*
 * 1,2,3번 수포자의 찍는 방식을 배열에 저장, count 배열 이용해서 맞은 문제 세고

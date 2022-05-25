@@ -1,4 +1,4 @@
-package baekjoon;
+package java. java.baekjoon;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -52,20 +52,20 @@ public class Main_15683 {
 			}
 		}
 		ans = Integer.MAX_VALUE;
-		solve(map,0);
+		solve(map, 0);
 		System.out.println(ans);
 	}
 
-	static void copy(int[][] arr1 , int[][] arr2) {
-		
-		for(int i=0; i<N; i++) {
-			for(int j=0; j<M; j++) {
+	static void copy(int[][] arr1, int[][] arr2) {
+
+		for (int i = 0; i < N; i++) {
+			for (int j = 0; j < M; j++) {
 				arr1[i][j] = arr2[i][j];
 			}
 		}
 	}
-	
-	static void solve(int[][] arr,int cnt) {
+
+	static void solve(int[][] arr, int cnt) {
 		if (cnt == count) {
 			int temp = 0;
 			for (int i = 0; i < N; i++) {
@@ -81,118 +81,122 @@ public class Main_15683 {
 			ans = Math.min(temp, ans);
 			return;
 		}
-			int x = cameras.get(cnt).x;
-			int y = cameras.get(cnt).y;
-			int num = cameras.get(cnt).num;
-			int copy[][] = new int[N][M]; // 복구해야하기 때문에 copy배열이 필요
-			
-			if(num ==1) { 
-				copy(copy, arr);
-				left(copy,x, y);
-				solve(copy,cnt+1);
-				
-				copy(copy, arr);
-				right(copy,x,y);
-				solve(copy,cnt+1);
-				
-				copy(copy, arr);
-				up(copy,x,y);
-				solve(copy,cnt+1);
-				
-				copy(copy, arr);
-				down(copy,x,y);
-				solve(copy,cnt+1);
-			}else if(num == 2){
-				copy(copy, arr);
-				left(copy,x, y);
-				right(copy,x,y);
-				solve(copy,cnt+1);
-				
-				copy(copy, arr);
-				up(copy,x,y);
-				down(copy,x,y);
-				solve(copy,cnt+1);
-			}else if(num == 3){
-				copy(copy, arr);
-				up(copy,x, y);
-				right(copy,x,y);
-				solve(copy,cnt+1);
-				
-				copy(copy, arr);
-				right(copy,x,y);
-				down(copy,x, y);
-				solve(copy,cnt+1);
-				
-				copy(copy, arr);
-				down(copy,x, y);
-				left(copy,x,y);
-				solve(copy,cnt+1);
-				
-				copy(copy, arr);
-				left(copy,x, y);
-				up(copy,x,y);
-				solve(copy,cnt+1);
-			}else if(num == 4){
-				copy(copy, arr); // 왼 위 오
-				up(copy,x, y);
-				left(copy,x,y);
-				right(copy,x,y);
-				solve(copy,cnt+1);
-				
-				copy(copy, arr); // 위 오 아
-				up(copy,x, y);
-				right(copy,x,y);
-				down(copy,x,y);
-				solve(copy,cnt+1);
-				
-				copy(copy, arr); // 왼 아 오
-				right(copy,x,y);
-				down(copy,x,y);
-				left(copy,x, y);
-				solve(copy,cnt+1);
-				
-				copy(copy, arr);
-				down(copy,x,y);
-				left(copy,x, y);
-				up(copy,x,y);
-				solve(copy,cnt+1);
-				
-				
-			}else if(num == 5){
-				copy(copy, arr);
-				left(copy,x, y);
-				right(copy,x,y);
-				up(copy,x,y);
-				down(copy,x,y);
-				solve(copy,cnt+1);
-			}
-		
-		
+		int x = cameras.get(cnt).x;
+		int y = cameras.get(cnt).y;
+		int num = cameras.get(cnt).num;
+		int copy[][] = new int[N][M]; // 복구해야하기 때문에 copy배열이 필요
+
+		if (num == 1) {
+			copy(copy, arr);
+			left(copy, x, y);
+			solve(copy, cnt + 1);
+
+			copy(copy, arr);
+			right(copy, x, y);
+			solve(copy, cnt + 1);
+
+			copy(copy, arr);
+			up(copy, x, y);
+			solve(copy, cnt + 1);
+
+			copy(copy, arr);
+			down(copy, x, y);
+			solve(copy, cnt + 1);
+		} else if (num == 2) {
+			copy(copy, arr);
+			left(copy, x, y);
+			right(copy, x, y);
+			solve(copy, cnt + 1);
+
+			copy(copy, arr);
+			up(copy, x, y);
+			down(copy, x, y);
+			solve(copy, cnt + 1);
+		} else if (num == 3) {
+			copy(copy, arr);
+			up(copy, x, y);
+			right(copy, x, y);
+			solve(copy, cnt + 1);
+
+			copy(copy, arr);
+			right(copy, x, y);
+			down(copy, x, y);
+			solve(copy, cnt + 1);
+
+			copy(copy, arr);
+			down(copy, x, y);
+			left(copy, x, y);
+			solve(copy, cnt + 1);
+
+			copy(copy, arr);
+			left(copy, x, y);
+			up(copy, x, y);
+			solve(copy, cnt + 1);
+		} else if (num == 4) {
+			copy(copy, arr); // 왼 위 오
+			up(copy, x, y);
+			left(copy, x, y);
+			right(copy, x, y);
+			solve(copy, cnt + 1);
+
+			copy(copy, arr); // 위 오 아
+			up(copy, x, y);
+			right(copy, x, y);
+			down(copy, x, y);
+			solve(copy, cnt + 1);
+
+			copy(copy, arr); // 왼 아 오
+			right(copy, x, y);
+			down(copy, x, y);
+			left(copy, x, y);
+			solve(copy, cnt + 1);
+
+			copy(copy, arr);
+			down(copy, x, y);
+			left(copy, x, y);
+			up(copy, x, y);
+			solve(copy, cnt + 1);
+
+		} else if (num == 5) {
+			copy(copy, arr);
+			left(copy, x, y);
+			right(copy, x, y);
+			up(copy, x, y);
+			down(copy, x, y);
+			solve(copy, cnt + 1);
+		}
 
 	}
 
-	static void left(int[][] arr,int x, int y) {
-			for (int j = y-1; j >= 0; j--) {
-				if(arr[x][j]==6) break;
-				arr[x][j]=-1;
-			}
-	}
-	static void right(int[][] arr,int x, int y) {
-		for (int j = y+1; j <M; j++) {
-			if(arr[x][j]==6) break;
-			arr[x][j]=-1;
+	static void left(int[][] arr, int x, int y) {
+		for (int j = y - 1; j >= 0; j--) {
+			if (arr[x][j] == 6)
+				break;
+			arr[x][j] = -1;
 		}
 	}
-	static void up(int[][] arr,int x, int y) {
-		for (int i= x-1; i>=0; i--) {
-			if(arr[i][y]==6) break;
-			arr[i][y]=-1;
+
+	static void right(int[][] arr, int x, int y) {
+		for (int j = y + 1; j < M; j++) {
+			if (arr[x][j] == 6)
+				break;
+			arr[x][j] = -1;
 		}
 	}
-	static void down(int[][] arr,int x, int y) {
-		for (int i= x+1; i<N; i++) {
-			if(arr[i][y]==6) break;
-			arr[i][y]=-1;
+
+	static void up(int[][] arr, int x, int y) {
+		for (int i = x - 1; i >= 0; i--) {
+			if (arr[i][y] == 6)
+				break;
+			arr[i][y] = -1;
+		}
+	}
+
+	static void down(int[][] arr, int x, int y) {
+		for (int i = x + 1; i < N; i++) {
+			if (arr[i][y] == 6)
+				break;
+			arr[i][y] = -1;
 		}
 	}
 

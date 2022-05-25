@@ -1,4 +1,4 @@
-package programmers;
+package java. java.programmers;
 import java.util.*;
 public class 괄호_변환_PDW {
     public String solution(String p) {

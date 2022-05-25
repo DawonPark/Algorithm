@@ -1,9 +1,10 @@
-package baekjoon;
+package java. java.baekjoon;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
+
 /*
  * 	 백준 배열 돌리기 3(https://www.acmicpc.net/problem/16935)
  *  
@@ -35,131 +36,131 @@ public class Main_16935 {
 		for (int i = 0; i < R; i++) {
 			int num = Integer.parseInt(st.nextToken());
 			switch (num) {
-				case 1:
-					rotation1();
-					break;
-				case 2:
-					rotation2();
-					break;
-				case 3:
-					rotation3();
-					break;
-				case 4:
-					rotation4();
-					break;
-				case 5:
-					rotation5();
-					break;
-				case 6:
-					rotation6();
-					break;
+			case 1:
+				rotation1();
+				break;
+			case 2:
+				rotation2();
+				break;
+			case 3:
+				rotation3();
+				break;
+			case 4:
+				rotation4();
+				break;
+			case 5:
+				rotation5();
+				break;
+			case 6:
+				rotation6();
+				break;
 			}
 		}
 		print(arr);
 	}
 
 	private static void rotation6() {
-		int[][] temp= new int[N][M];
+		int[][] temp = new int[N][M];
 		copy(temp);
-		for(int i=0; i<N/2; i++) { // 1번 그룹
-			for(int j=0;j<M/2; j++) {
-				arr[i][j] = temp[i][M/2+j];
+		for (int i = 0; i < N / 2; i++) { // 1번 그룹
+			for (int j = 0; j < M / 2; j++) {
+				arr[i][j] = temp[i][M / 2 + j];
 			}
 		}
-		
-		for(int i=0; i<N/2; i++) { // 2번 그룹
-			for(int j=0;j<M/2; j++) {
-				arr[i][M/2+j] = temp[N/2+i][M/2+j];
+
+		for (int i = 0; i < N / 2; i++) { // 2번 그룹
+			for (int j = 0; j < M / 2; j++) {
+				arr[i][M / 2 + j] = temp[N / 2 + i][M / 2 + j];
 			}
 		}
-		
-		for(int i=0; i<N/2; i++) { // 3번 그룹
-			for(int j=0;j<M/2; j++) {
-				arr[N/2+i][M/2+j] = temp[N/2+i][j];
+
+		for (int i = 0; i < N / 2; i++) { // 3번 그룹
+			for (int j = 0; j < M / 2; j++) {
+				arr[N / 2 + i][M / 2 + j] = temp[N / 2 + i][j];
 			}
 		}
-		
-		for(int i=0; i<N/2; i++) { // 4번 그룹
-			for(int j=0;j<M/2; j++) {
-				arr[N/2+i][j] = temp[i][j];
+
+		for (int i = 0; i < N / 2; i++) { // 4번 그룹
+			for (int j = 0; j < M / 2; j++) {
+				arr[N / 2 + i][j] = temp[i][j];
 			}
 		}
-		
+
 //		print(arr);
 	}
 
 	private static void rotation5() {
-		int[][] temp= new int[N][M];
+		int[][] temp = new int[N][M];
 		copy(temp);
-		for(int i=0; i<N/2; i++) { // 1번 그룹
-			for(int j=0;j<M/2; j++) {
-				arr[i][j] = temp[N/2+i][j];
+		for (int i = 0; i < N / 2; i++) { // 1번 그룹
+			for (int j = 0; j < M / 2; j++) {
+				arr[i][j] = temp[N / 2 + i][j];
 			}
 		}
-		for(int i=0; i<N/2; i++) { // 2번 그룹
-			for(int j=0;j<M/2; j++) {
-				arr[i][M/2+j] = temp[i][j];
+		for (int i = 0; i < N / 2; i++) { // 2번 그룹
+			for (int j = 0; j < M / 2; j++) {
+				arr[i][M / 2 + j] = temp[i][j];
 			}
 		}
-		for(int i=0; i<N/2; i++) { // 3번 그룹
-			for(int j=0;j<M/2; j++) {
-				arr[N/2+i][M/2+j] = temp[i][M/2+j];
+		for (int i = 0; i < N / 2; i++) { // 3번 그룹
+			for (int j = 0; j < M / 2; j++) {
+				arr[N / 2 + i][M / 2 + j] = temp[i][M / 2 + j];
 			}
 		}
-		for(int i=0; i<N/2; i++) { // 4번 그룹
-			for(int j=0;j<M/2; j++) {
-				arr[N/2+i][j] = temp[N/2+i][M/2+j];
+		for (int i = 0; i < N / 2; i++) { // 4번 그룹
+			for (int j = 0; j < M / 2; j++) {
+				arr[N / 2 + i][j] = temp[N / 2 + i][M / 2 + j];
 			}
 		}
-	
+
 //		print(arr);
-		
+
 	}
 
 	private static void rotation4() {
 		int[][] result = new int[M][N];
-		for(int i=0; i<M; i++) {
-			for(int j=0; j<N; j++) {
-				result[i][j] = arr[j][M-i-1];
+		for (int i = 0; i < M; i++) {
+			for (int j = 0; j < N; j++) {
+				result[i][j] = arr[j][M - i - 1];
 			}
 		}
 		arr = new int[M][N];
-		for(int i=0; i<M; i++) {
-			for(int j=0; j<N; j++) {
+		for (int i = 0; i < M; i++) {
+			for (int j = 0; j < N; j++) {
 				arr[i][j] = result[i][j];
 			}
 		}
-		int temp=N;
-		N=M;
-		M=temp;
+		int temp = N;
+		N = M;
+		M = temp;
 	}
 
 	private static void rotation3() {
 		int[][] result = new int[M][N];
-		
-		for(int i=0; i<M; i++) {
-			for(int j=0; j<N; j++) {
-				result[i][j] = arr[N-j-1][i];
+
+		for (int i = 0; i < M; i++) {
+			for (int j = 0; j < N; j++) {
+				result[i][j] = arr[N - j - 1][i];
 			}
 		}
 		arr = new int[M][N];
-		for(int i=0; i<M; i++) {
-			for(int j=0; j<N; j++) {
+		for (int i = 0; i < M; i++) {
+			for (int j = 0; j < N; j++) {
 				arr[i][j] = result[i][j];
 			}
 		}
-		int temp=N;
-		N=M;
-		M=temp;
+		int temp = N;
+		N = M;
+		M = temp;
 	}
 
 	private static void copy(int[][] temp) {
 		for (int i = 0; i < N; i++) {
 			for (int j = 0; j < M; j++) {
-				temp[i][j]= arr[i][j];
+				temp[i][j] = arr[i][j];
 			}
 		}
-		
+
 	}
 
 	private static void rotation2() {

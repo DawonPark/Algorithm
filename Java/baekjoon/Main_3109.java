@@ -1,8 +1,9 @@
-package baekjoon;
+package java. java.baekjoon;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+
 /*
  *  백준 3109 빵집
  * 
@@ -15,51 +16,52 @@ import java.io.InputStreamReader;
  *  
  */
 public class Main_3109 {
-	static int R , C ,ans;
+	static int R, C, ans;
 	static char[][] map;
-	static int[] dx = {-1,0,1};
+	static int[] dx = { -1, 0, 1 };
 	static boolean check;
-	
+
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String[] data = br.readLine().split(" ");
-		 R = Integer.parseInt(data[0]);
-		 C = Integer.parseInt(data[1]);
-		 map = new char[R][C];
-		 for(int i=0; i<R; i++) {
-			 String s =br.readLine();
-			 for(int j=0; j<C; j++) {
-				 map[i][j] = s.charAt(j);
-			 }
-		 }
-		 for(int i=0; i<R; i++) {
-			 check = false;
-			 solve(i,0);
-		 }
-		 System.out.println(ans);
+		R = Integer.parseInt(data[0]);
+		C = Integer.parseInt(data[1]);
+		map = new char[R][C];
+		for (int i = 0; i < R; i++) {
+			String s = br.readLine();
+			for (int j = 0; j < C; j++) {
+				map[i][j] = s.charAt(j);
+			}
+		}
+		for (int i = 0; i < R; i++) {
+			check = false;
+			solve(i, 0);
+		}
+		System.out.println(ans);
 	}
-	
-	
-	static void solve(int r,int c) {
-		if(c == C-1) {
+
+	static void solve(int r, int c) {
+		if (c == C - 1) {
 			ans++;
 			check = true;
 			return;
 		}
-		
-		for(int d =0; d<3; d++) {
-			if(check == true) return;
+
+		for (int d = 0; d < 3; d++) {
+			if (check == true)
+				return;
 			int nr = r + dx[d];
 			int nc = c + 1;
-			
-			if(nr <0 || nr >= R || nc< 0 || nc >= C) continue;
-			
-			if(map[nr][nc]=='.' ) {
+
+			if (nr < 0 || nr >= R || nc < 0 || nc >= C)
+				continue;
+
+			if (map[nr][nc] == '.') {
 				map[nr][nc] = 'x';
-				solve(nr,nc);
+				solve(nr, nc);
 			}
-		
+
 		}
 	}
-	
+
 }

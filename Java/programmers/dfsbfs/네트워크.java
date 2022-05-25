@@ -1,4 +1,4 @@
-package programmers.dfsbfs;
+package java. java.programmers.dfsbfs;
 
 public class 네트워크 {
     static int N;

@@ -1,4 +1,4 @@
-package programmers.kakao;
+package java.programmers.kakao;
 
 import java.util.ArrayList;
 import java.util.HashMap;

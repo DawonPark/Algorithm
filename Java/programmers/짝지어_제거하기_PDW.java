@@ -1,4 +1,4 @@
-package programmers;
+package java. java.programmers;
 import java.util.*;
 public class 짝지어_제거하기_PDW {
     public int solution(String s)

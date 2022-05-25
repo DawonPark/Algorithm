@@ -1,4 +1,4 @@
-package programmers.해시;
+package java. programmers.해시;
 
 import java.util.*;
 import java.util.Map.Entry;

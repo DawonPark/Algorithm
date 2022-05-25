@@ -1,4 +1,4 @@
-package programmers.dfsbfs;
+package java. java.programmers.dfsbfs;
 
 public class 타겟넘버 {
 	 static int[] arr;

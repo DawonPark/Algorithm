@@ -1,4 +1,4 @@
-package programmers.greedy;
+package java. java.programmers.greedy;
 
 import java.util.Arrays;
 public class 구명보트 {

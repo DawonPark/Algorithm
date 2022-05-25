@@ -1,4 +1,4 @@
-package programmers;
+package java. java.programmers;
 import java.util.*;
 public class 디스크_컨트롤러_PDW {
     public int solution(int[][] jobs) {

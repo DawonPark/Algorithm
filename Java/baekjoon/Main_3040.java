@@ -1,8 +1,9 @@
-package baekjoon;
+package java. java.baekjoon;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+
 /*
  * 	매일 매일 일곱 난쟁이는 광산으로 일을 하러 간다. 난쟁이가 일을 하는 동안 백설공주는 그들을 위해 저녁 식사를 준비한다. 
  	백설공주는 의자 일곱개, 접시 일곱개, 나이프 일곱개를 준비한다.
@@ -17,35 +18,37 @@ import java.io.InputStreamReader;
 public class Main_3040 {
 	static int[] dwarfs;
 	static int[] answer;
-	static int R=7;
-	static int N=9;
+	static int R = 7;
+	static int N = 9;
+
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		dwarfs = new int[N]; answer = new int[R];
-		for(int i=0; i<N; i++) {
+		dwarfs = new int[N];
+		answer = new int[R];
+		for (int i = 0; i < N; i++) {
 			dwarfs[i] = Integer.parseInt(br.readLine());
 		}
-		combi(0,0);
+		combi(0, 0);
 	}
-	
+
 	static void combi(int start, int cnt) {
-		if(cnt == R) {
-			int result =0;
-			for(int i=0; i<R; i++) {
-				result+= dwarfs[answer[i]];
+		if (cnt == R) {
+			int result = 0;
+			for (int i = 0; i < R; i++) {
+				result += dwarfs[answer[i]];
 			}
-			if(result == 100) {
-				for(int i=0; i<R; i++) {
+			if (result == 100) {
+				for (int i = 0; i < R; i++) {
 					System.out.println(dwarfs[answer[i]]);
 				}
 			}
 			return;
 		}
-	
-		for(int i=start; i<N; i++) {
-				answer[cnt] = i; 
-				combi(i+1 , cnt+1);
+
+		for (int i = start; i < N; i++) {
+			answer[cnt] = i;
+			combi(i + 1, cnt + 1);
 		}
 	}
-	
+
 }

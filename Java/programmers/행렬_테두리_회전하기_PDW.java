@@ -1,4 +1,4 @@
-package programmers;
+package java. java.programmers;
 
 public class 행렬_테두리_회전하기_PDW {
 	class Solution {

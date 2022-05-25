@@ -1,4 +1,4 @@
-package baekjoon;
+package java. java.baekjoon;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -13,6 +13,7 @@ import java.util.StringTokenizer;
 public class Main_16926 {
 
 	static int arr[][];
+
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = null;
@@ -36,7 +37,7 @@ public class Main_16926 {
 		int boundX = N;
 		int boundY = M;
 		for (int i = 0; i < R; i++) {
-			while (Math.min(N, M)/2 > 0) {
+			while (Math.min(N, M) / 2 > 0) {
 				if (dir == 0) {
 					if (x != boundX - 1) {
 						result[x + 1][y] = arr[x][y];
@@ -81,22 +82,22 @@ public class Main_16926 {
 					}
 				}
 			}
-			for(int r=0; r<tempN; r++) {
-				for(int c=0; c<tempM; c++) {
-					arr[r][c]= result[r][c];
+			for (int r = 0; r < tempN; r++) {
+				for (int c = 0; c < tempM; c++) {
+					arr[r][c] = result[r][c];
 				}
 			}
-			x=0;
-			y=0;
+			x = 0;
+			y = 0;
 			N = tempN;
 			M = tempM;
 			boundX = tempN;
 			boundY = tempM;
-			n=0;
+			n = 0;
 		}
-		for(int r=0; r<tempN; r++) {
-			for(int c=0; c<tempM; c++) {
-				System.out.print(result[r][c]+" ");
+		for (int r = 0; r < tempN; r++) {
+			for (int c = 0; c < tempM; c++) {
+				System.out.print(result[r][c] + " ");
 			}
 			System.out.println();
 		}

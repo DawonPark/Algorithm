@@ -1,6 +1,7 @@
-package baekjoon;
+package java. java.baekjoon;
 
 import java.util.Scanner;
+
 /*
  * 백준 2810 - 컵홀더
  * 
@@ -8,27 +9,29 @@ import java.util.Scanner;
  * -> 처음에 놓으면 뒤에 놓는것만 생각하면 됨.
  */
 public class Main_2810 {
-	
+
 	public static void main(String[] args) {
-		Scanner sc= new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		int N = Integer.parseInt(sc.nextLine());
 		String s = sc.nextLine();
-		int count =1;
-		int check= 0;
-		for(int i=0; i<N; i++) {
-			if(s.charAt(i) == 'S') {
-			count++;
-			}else if(s.charAt(i) == 'L') {
+		int count = 1;
+		int check = 0;
+		for (int i = 0; i < N; i++) {
+			if (s.charAt(i) == 'S') {
+				count++;
+			} else if (s.charAt(i) == 'L') {
 				check++;
-				if(check ==2) {
+				if (check == 2) {
 					count++;
-					check =0;
+					check = 0;
 				}
-				
+
 			}
 		}
-		if(count > N) System.out.println(N);
-		else System.out.println(count);
+		if (count > N)
+			System.out.println(N);
+		else
+			System.out.println(count);
 		sc.close();
 	}
 }

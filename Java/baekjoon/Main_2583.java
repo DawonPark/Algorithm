@@ -1,4 +1,4 @@
-package baekjoon;
+package java. java.baekjoon;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -29,7 +29,7 @@ public class Main_2583 {
 				}
 			}
 		}
-		
+
 		int[] dx = { 0, 0, -1, 1 };
 		int[] dy = { -1, 1, 0, 0 };
 		for (int j = 0; j < M; j++) {
@@ -60,7 +60,7 @@ public class Main_2583 {
 		}
 		Collections.sort(list);
 		System.out.println(list.size());
-		for(int v : list) {
+		for (int v : list) {
 			System.out.print(v + " ");
 		}
 	}

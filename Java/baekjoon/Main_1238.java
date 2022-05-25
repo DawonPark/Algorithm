@@ -1,4 +1,4 @@
-package baekjoon;
+package java. java.baekjoon;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -10,6 +10,7 @@ import java.util.StringTokenizer;
 
 public class Main_1238 {
 	static int N;
+
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
@@ -31,31 +32,32 @@ public class Main_1238 {
 			list.get(start).add(new Node(end, cost));
 			reverseList.get(end).add(new Node(start, cost));
 		}
-		int[] dist = new int[N+1];
-		int[] reverseDist = new int[N+1];
+		int[] dist = new int[N + 1];
+		int[] reverseDist = new int[N + 1];
 		Arrays.fill(dist, Integer.MAX_VALUE);
 		Arrays.fill(reverseDist, Integer.MAX_VALUE);
 		dijkstra(X, dist, list);
 		dijkstra(X, reverseDist, reverseList);
 		int ans = 0;
-		for(int i=1; i<=N; i++) {
+		for (int i = 1; i <= N; i++) {
 			ans = Math.max(ans, dist[i] + reverseDist[i]);
 		}
 		System.out.println(ans);
 	}
 
 	private static void dijkstra(int x, int[] dist, ArrayList<ArrayList<Node>> list) {
-		boolean[] visited = new boolean[N+1];
+		boolean[] visited = new boolean[N + 1];
 		PriorityQueue<Node> pq = new PriorityQueue<>();
-		pq.add(new Node(x,0));
+		pq.add(new Node(x, 0));
 		dist[x] = 0;
-		
-		while(!pq.isEmpty()) {
+
+		while (!pq.isEmpty()) {
 			Node node = pq.poll();
-			if(visited[node.end]) continue;
+			if (visited[node.end])
+				continue;
 			visited[node.end] = true;
-			for(Node n : list.get(node.end)) {
-				if(dist[n.end] > dist[node.end] + n.cost) {
+			for (Node n : list.get(node.end)) {
+				if (dist[n.end] > dist[node.end] + n.cost) {
 					dist[n.end] = dist[node.end] + n.cost;
 					pq.add(new Node(n.end, dist[n.end]));
 				}
@@ -63,7 +65,7 @@ public class Main_1238 {
 		}
 	}
 
-	static class Node implements Comparable<Node>{
+	static class Node implements Comparable<Node> {
 		int end, cost;
 
 		Node(int end, int cost) {

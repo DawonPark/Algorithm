@@ -1,4 +1,4 @@
-package baekjoon;
+package java. java.baekjoon;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -15,10 +15,10 @@ import java.util.StringTokenizer;
  */
 
 public class Main_17406 {
-	static int[][] arr,tempArr, rotation;
+	static int[][] arr, tempArr, rotation;
 	static boolean isSelected[];
 	static int[] answer;
-	static int K, result ,N,M;
+	static int K, result, N, M;
 	static int dx[] = { 1, 0, -1, 0 }; // 아래 오른쪽 위쪽 왼쪽
 	static int dy[] = { 0, 1, 0, -1 };
 

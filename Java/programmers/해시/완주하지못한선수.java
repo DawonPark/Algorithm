@@ -1,4 +1,4 @@
-package programmers.해시;
+package java. programmers.해시;
 import java.util.*;
 public class 완주하지못한선수 {
     public String solution(String[] participant, String[] completion) {

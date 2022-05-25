@@ -1,6 +1,7 @@
-package baekjoon;
+package java. java.baekjoon;
 
 import java.util.Scanner;
+
 /*
  * 백준 2851 - 슈퍼마리오
  * 
@@ -9,23 +10,23 @@ import java.util.Scanner;
 public class Main_2851 {
 
 	public static void main(String[] args) {
-		Scanner sc =new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		int[] mushroom = new int[10];
-		for(int i =0; i<10; i++) {
+		for (int i = 0; i < 10; i++) {
 			mushroom[i] = sc.nextInt();
 		}
-		int goal =100;
+		int goal = 100;
 		int sum = 0;
-		int temp =0;
-		for(int i=0; i<10; i++) {
-			temp+=mushroom[i];
-			if(Math.abs(goal-sum) >= Math.abs(goal-temp)){
-				sum= temp;
+		int temp = 0;
+		for (int i = 0; i < 10; i++) {
+			temp += mushroom[i];
+			if (Math.abs(goal - sum) >= Math.abs(goal - temp)) {
+				sum = temp;
 			}
 		}
-		
+
 		System.out.println(sum);
 		sc.close();
 	}
-	
+
 }

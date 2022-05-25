@@ -1,4 +1,4 @@
-package programmers.힙;
+package java. programmers.힙;
 import java.util.*;
 public class 디스크컨트롤러 {
     public int solution(int[][] jobs) {

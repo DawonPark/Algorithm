@@ -1,4 +1,4 @@
-package swea.d3;
+package java. swea.d3;
 
 public class D3_Solution_3131 {
 	public static void main(String[] args) {

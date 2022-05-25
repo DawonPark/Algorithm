@@ -1,4 +1,4 @@
-package programmers;
+package java. java.programmers;
 import java.util.*;
 public class 메뉴_리뉴얼_PDW {
     static HashMap<String, Integer> map = new HashMap<>();

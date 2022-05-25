@@ -1,4 +1,4 @@
-package programmers.greedy;
+package java. java.programmers.greedy;
 
 class Solution {
     public int solution(int n, int[] lost, int[] reserve) {

@@ -1,4 +1,4 @@
-package programmers.dfsbfs;
+package java. java.programmers.dfsbfs;
 
 public class 단어변환 {
     static int ans;

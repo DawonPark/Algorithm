@@ -1,4 +1,4 @@
-package swea.d3;
+package java. swea.d3;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

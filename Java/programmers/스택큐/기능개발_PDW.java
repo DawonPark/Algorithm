@@ -1,4 +1,4 @@
-package programmers.스택큐;
+package java. programmers.스택큐;
 
 import java.util.*;
 

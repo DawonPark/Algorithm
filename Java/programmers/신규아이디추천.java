@@ -1,4 +1,4 @@
-package programmers;
+package java. java.programmers;
 
 public class 신규아이디추천 {
 	class Solution {
