@@ -7,7 +7,6 @@ function solution(n, t, m, timetable) {
             return Number(a.substring(0,2)) - Number(b.substring(0,2))
         }
     })
-    console.log(timetable);
     let queue = [];
     const answer = [];
     let cnt = 0;
@@ -21,27 +20,26 @@ function solution(n, t, m, timetable) {
             else {
                 break;
             }
-        }        
+        }
+        // console.log(queue);
         if(queue.length < m){
             answer.push(startTime);
             queue = [];
         }else{
             let [hour, min] = [Number(queue[m-1].substring(0,2)) , Number(queue[m-1].substring(3,5))];
-            console.log(queue);
             if(min - 1 < 0){
                 if(hour -1 >=10)    answer.push("" + (hour-1) + ":59");
-                else    answer.push("0" + (hour-1) + ":59");
-             
+                else answer.push("0" + (hour-1) + ":59");
             }else {
                 if(min - 1 < 10){
                     if(hour >= 10) answer.push("" + hour + ":0" + (min-1));
                     else answer.push("0"+hour+":0" + (min -1));
                 }else{
                     if(hour >= 10) answer.push("" + hour + ":" + (min -1));
-                    else answer.push("0"+hour+":0" + (min -1));
+                    else answer.push("0"+hour+":" + (min -1));
                 }
-                queue.splice(m,queue.length);
             }
+            queue.splice(0,m);
         }
         if(min + t >= 60){
             let convert = min + t - 60;
@@ -59,7 +57,7 @@ function solution(n, t, m, timetable) {
             else startTime = "0" + (hour) + ":" + convert;
         }
     }
-    console.log(answer);
+    // console.log(answer);
     
     return answer.pop();
 }
