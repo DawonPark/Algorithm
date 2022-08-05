@@ -13,8 +13,8 @@ function solution(name) {
     while (index < name.length && name[index] === "A") {
       index++;
     }
-    move = Math.min(move, (name.length - index) * 2 + i);
-    move = Math.min(move, i * 2 + name.length - index);
+    move = Math.min(move, (name.length - index) * 2 + i); // 왼쪽으로 갔다가 다시 돌아가는 경우
+    move = Math.min(move, i * 2 + name.length - index); // 오른쪽으로 갔다가 다시 돌아가는 경우
   }
   return answer + move;
 }
