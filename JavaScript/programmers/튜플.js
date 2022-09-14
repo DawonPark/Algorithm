@@ -1,27 +1,24 @@
 function solution(s) {
   let answer = [];
-  let str = s.slice(1, s.length - 1);
+  let string = s.slice(1, s.length - 1); // 맨 앞과 뒤 제거
+  let pre = 0;
   let arr = [];
-  let cnt = 0;
-  let [idx, pre] = [0, 1];
-  while (idx < str.length) {
-    if (str[idx] === "}") {
-      arr[cnt++] = str
-        .slice(pre, idx)
-        .split(",")
-        .map((el) => parseInt(el));
-      pre = idx + 3;
+  // } 를 기점으로 잘라준 후 ,를 구분자로 다시 자르면 됨
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] === "}") {
+      arr.push(string.slice(pre + 1, i).split(","));
+      pre = i + 2;
     }
-    idx++;
   }
+  // 원소 개수를 기준으로 정렬
   arr.sort((a, b) => a.length - b.length);
-  for (let i = 0; i < arr.length; i++) {
-    for (let j = 0; j < arr[i].length; j++) {
-      if (!answer.includes(arr[i][j])) {
-        answer.push(arr[i][j]);
-        break;
-      }
+
+  for (const v of arr) {
+    for (let s of v) {
+      if (answer.includes(+s)) continue;
+      else answer.push(+s);
     }
   }
+
   return answer;
 }
