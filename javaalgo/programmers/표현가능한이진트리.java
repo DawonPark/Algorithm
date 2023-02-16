@@ -1,10 +1,9 @@
 package javaalgo.programmers;
-import java.util.*;
 
 public class 표현가능한이진트리 {
+	static int[] num;
+	static boolean res;
 	class Solution {
-	    static int[] num;
-	    static boolean res;
 	    public void dfs(int s, int e, boolean flag){
 	        int mid = (s + e) / 2;
 	        if(flag && num[mid] == 1){
